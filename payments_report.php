@@ -18,7 +18,7 @@
             <div class="col-md-12">
                 <table class="table table-condensed  table-striped table-hover" id='report-list'>
                   
-                    <thead>
+                    <thead   class="bg-dark text-light">
                     <h4  class="text-center">Wayera Primary Fees Payment Report</h4>
                         <tr class="h5">
                             <th class="text-center ">#</th>
@@ -26,7 +26,7 @@
                             <th class="">ID No.</th>
                             <th class="">Invoice No.</th>
                             <th class="">Name</th>
-                            <th class="">Paid Amount</th>
+                            <th class="">Amount Paid</th>
                             <th >Remarks</th>
                         </tr>
                     </thead>
@@ -74,8 +74,8 @@
 			        </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="5" class="text-right">Total</th>
-                            <th class="text-right"><?php echo number_format($total,2) ?></th>
+                            <th colspan="5" class="text-right h5">Total</th>
+                            <th class="text-right h5"><?php echo number_format($total,2) ?></th>
                             <th></th>
                         </tr>
                     </tfoot>
@@ -142,20 +142,11 @@ $('#print').click(function(){
             background-color: white; /* Light gray */
         }
         .table-striped tbody tr:nth-of-type(even) {
-            background-color: #d9edf7; /* Light blue */
+            background-color: #E5E4E2;; /* Light blue */
         }
 
 
 
-th{
-	background-color: #d9edf7;
-	color:#17a2b8;
-	
-}
-
-td{
-
-}
 
 
 

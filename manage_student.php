@@ -8,24 +8,24 @@ foreach($qry->fetch_array() as $k => $val){
 }
 ?>
 <div class="container-fluid">
-    <form action="" id="manage-student">
+    <form action="" id="manage-student" class="h1">
         <input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
         <div id="msg" class="form-group"></div>
         <div class="form-group">
-            <label for="" class="control-label h6">Birth Certificate No./Id No.</label>
-            <input type="text" class="form-control" name="id_no"  value="<?php echo isset($id_no) ? $id_no :'' ?>" required placeholder="Enter Student ID or Birth Certificate Number">
+            <label for="" class="control-label">Birth Certificate No./Id No.</label>
+            <input type="text" class="form-control" name="id_no"  value="<?php echo isset($id_no) ? $id_no :'' ?>" required placeholder="Enter Student ID">
         </div>
         <div class="form-group">
-            <label for="" class="control-label h6"> Full Name of Pupil:</label>
-            <input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required  placeholder="Enter the Pupils Full name i.e First Name and Surname">
+            <label for="" class="control-label "> Full Name of Pupil:</label>
         </div>
-        <div class="form-group">
-        <label for=""  class="control-label h6">Date of Birth:</label>
+        <div class="form-group">            <input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required  placeholder="Full Name">
+
+        <label for=""  class="control-label">Date of Birth:</label>
         <input type="date" id="dob" name="dob"    class="form-control"  value="<?php echo isset($dob) ? $dob :'' ?>" required placeholder="Enter Date of Birth">
     </div>
   
         <div class="form-group">
-            <label for="" class="control-label h6">Gender of Pupil:</label>
+            <label for="" class="control-label">Gender of Pupil:</label>
             <select class="form-control" name="gender"  value="<?php echo isset($gender) ? $gender :'' ?>" required placeholder="Enter Gender">
             <option value="" >Select a gender </option>
                 <option value="male">Male</option>
@@ -35,7 +35,7 @@ foreach($qry->fetch_array() as $k => $val){
         </div>
         
         <div class="form-group">
-            <label for="" class="control-label h6">Grade of Pupil:</label>
+            <label for="" class="control-label">Grade of Pupil:</label>
             <select class="form-control" name="grade"  value="<?php echo isset($grade) ? $grade :'' ?>" required>
             <option value="" >What grade is the Student ? </option>
             <option value="ECD A">ECD A</option>
@@ -51,16 +51,16 @@ foreach($qry->fetch_array() as $k => $val){
             </select>
         </div>
         <div class="form-group">
-            <label for="" class="control-label"> Parent's Contact</label>
-            <input type="tel" class="form-control h6" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required placeholder="070-0000-000">
+            <label for="" class="control-label"> Parent's Contact:</label>
+            <input type="tel" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required placeholder="070-0000-000">
         </div>
         <div class="form-group">
-            <label for="" class="control-label h6">Parent's/Guardian's Full Name:</label>
-            <input type="text" class="form-control" name="parent"  value="<?php echo isset($parent) ? $parent:'' ?>" required>
+            <label for="" class="control-label">Parent's/Guardian's Full Name:</label>
+            <input type="text" class="form-control" name="parent"  value="<?php echo isset($parent) ? $parent:'' ?>" required placeholder="Parent Full Name">
         </div>
         <div class="form-group">
-            <label for="" class="control-label h6"> Current Home Address:</label>
-            <textarea name="address" id="" cols="30" rows="3" class="form-control" required=""><?php echo isset($address) ? $address :'' ?></textarea>
+            <label for="" class="control-label"> Current Home Address:</label>
+            <textarea name="address" id="" cols="30" rows="2" class="form-control" required=""><?php echo isset($address) ? $address :'' ?></textarea>
         </div>
     </form>
 </div>
@@ -100,3 +100,19 @@ foreach($qry->fetch_array() as $k => $val){
         width:'100%'
     })
 </script>
+
+<style>
+
+  h5{
+    font-size:30px;
+  }  
+#submit{
+
+background:#17a2b8;
+}
+
+.control-label{
+    font-size:20px;
+    font-style:bold;
+}
+</style>

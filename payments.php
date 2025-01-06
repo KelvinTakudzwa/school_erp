@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header bg-dark text-light">
 						<h3 class="text-center">Payments</h3>
 				       
 						<span class="float:right"><a class="btn btn-info btn-block btn-m col-sm-2 float-right" href="javascript:void(0)" id="new_payment">
@@ -17,14 +17,14 @@
 				</a></span>
 					</div>
 					<div class="card-body">
-						<table class="able table-condensed  table-striped table-hover">
-							<thead>
+						<table class="Table table-condensed  table-striped table-hover">
+							<thead class="bg-dark text-light">
 								<tr class="h5">
 									<th class="text-center">#</th>
 									<th class="">Date of transaction</th>
 									<th class=""> Birth Certificate /ID No.</th>
 									<th class="">Reciept No.</th>
-									<th class="">Name</th>
+									<th class=""> Full Name</th>
 									<th class="">Paid Amount</th>
 									<th class="text-center">Action</th>
 								</tr>
@@ -56,9 +56,9 @@
 										<p> <b><?php echo number_format($row['amount'],2) ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-m btn-outline-info view_payment" type="button" data-id="<?php echo $row['id'] ?>" data-ef_id="<?php echo $row['ef_id'] ?>">View</button>
-										<button class="btn btn-m btn-outline-info edit_payment" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-m btn-outline-info delete_payment" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-m btn-outline-dark view_payment" type="button" data-id="<?php echo $row['id'] ?>" data-ef_id="<?php echo $row['ef_id'] ?>">View</button>
+										<button class="btn btn-m btn-outline-dark edit_payment" type="button" data-id="<?php echo $row['id'] ?>"  >Edit</button>
+										<button class="btn btn-m btn-outline-dark delete_payment" type="button" data-id="<?php echo $row['id'] ?>"  >Delete</button>
 									</td>
 								</tr>
 								<?php 
@@ -74,7 +74,9 @@
 								?>
 							</tbody>
 						</table>
+						<p class="h6">&copy; 2025  Fibbonnaci & Fermet IT Consultancy. All rights reserved.</p>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -134,25 +136,17 @@
 </script>
 
 <style>
- .card-header{
-	background-color: #d9edf7;
- }
-
+ 
  
  .table-striped tbody tr:nth-of-type(odd) {
             background-color: white; /* Light gray */
         }
         .table-striped tbody tr:nth-of-type(even) {
-            background-color: #d9edf7; /* Light blue */
+            background-color: #E5E4E2;; /* Light blue */
         }
 
 
 
-th{
-	background-color: #d9edf7;
-	color:#17a2b8;
-	
-}
 
 td{
 
@@ -195,7 +189,7 @@ label{
 			width: 50% /* Full width */
             padding: 15px; /* Increase padding for height */
             font-size: 1.25rem; /* Larger font size */
-            border: 3px solid  #17a2b8 /* Blue border */;
+            border:1px solid black/* Blue border */;
             border-radius: 5px; /* Rounded corners */
 		}
       

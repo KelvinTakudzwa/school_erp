@@ -12,15 +12,15 @@ foreach($qry->fetch_array() as $k => $val){
         <input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
         <div class="row">
         <div class="col-lg-6 border-right">
-            <h5><b>Course Details</b></h5>
+            <h4><b> Add Fees Details</b></h4>
             <hr>
             <div id="msg" class="form-group"></div>
             <div class="form-group">
-                <label for="" class="control-label">Course</label>
+                <label for="" class="control-label">What is The Fee For?</label>
                 <input type="text" class="form-control" name="course"  value="<?php echo isset($course) ? $course :'' ?>" required>
             </div>
             <div class="form-group">
-                <label for="" class="control-label">Level</label>
+                <label for="" class="control-label"> What Level ? </label>
                 <input type="text" class="form-control" name="level"  value="<?php echo isset($level) ? $level :'' ?>" required>
             </div>
             <div class="form-group">
@@ -31,18 +31,18 @@ foreach($qry->fetch_array() as $k => $val){
         <div class="col-lg-6">
             <h5><b>Fee Details</b></h5>
             <hr>
-            <div class="row">
-                <div class="form-group">
+            <div class="row h6">
+                <div class="form-group h6">
                     <label for="ft" class="control-label">Fee Type</label>
-                    <input type="text" id="ft" class="form-control-sm">
+                    <input type="text" id="ft" class="form-control-m">
                 </div>
                 <div class="form-group">
                     <label for="" class="control-label">Amount</label>
-                    <input type="number" step="any" min="0" id="amount" class="form-control-sm text-right">
+                    <input type="text" step="any" min="0" id="amount" class="form-control-m text-right">
                 </div>
                  <div class="form-group pt-1">
                     <label for="" class="control-label">&nbsp;</label>
-                    <button class="btn btn-primary btn-sm" type="button" id="add_fee">Add to List</button>
+                    <button class="btn btn-info btn-sm" type="button" id="add_fee">Add</button>
                 </div>
             </div>
             <hr>
@@ -181,3 +181,15 @@ foreach($qry->fetch_array() as $k => $val){
         width:'100%'
     })
 </script>
+
+<style>
+h5{
+    
+  display:none;  
+
+}
+#submit{
+
+    background:#17a2b8;
+}
+</style>

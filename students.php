@@ -27,7 +27,7 @@
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header bg-dark text-light">
 
 					
 						<h3 class="text-center">List of Students </h3>
@@ -77,13 +77,15 @@
 									</td>
 									
 									<td class="text-center">
-										<button class="btn btn-m btn-outline-info edit_student" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-m btn-outline-info delete_student" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-m btn-outline-dark edit_student" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-m btn-outline-dark delete_student" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
 							</tbody>
+							
 						</table>
+						<p>&copy; 2025 Fermet IT Consultancy. All rights reserved.</p>
 					</div>
 				</div>
 			</div>
@@ -143,25 +145,17 @@
 
 
 <style>
- .card-header{
-	background-color: #d9edf7;
- }
+ 
 
  
  .table-striped tbody tr:nth-of-type(odd) {
             background-color: white; /* Light gray */
         }
         .table-striped tbody tr:nth-of-type(even) {
-            background-color: #d9edf7; /* Light blue */
+            background-color: #E5E4E2; /* Light blue */
         }
 
 
-
-th{
-	background-color: #d9edf7;
-	color:#17a2b8;
-	
-}
 
 td{
 
@@ -198,13 +192,14 @@ label{
 	}
       a{
 		font-size: 1.25rem;
+		
 	  }  
 	   
 	    input{
 			width: 50% /* Full width */
             padding: 15px; /* Increase padding for height */
             font-size: 1.25rem; /* Larger font size */
-            border: 3px solid  #17a2b8 /* Blue border */;
+            border: 1px solid black ; /* Blue border */;
             border-radius: 5px; /* Rounded corners */
 		}
       

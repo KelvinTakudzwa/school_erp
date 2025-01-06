@@ -26,7 +26,7 @@
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header" id="header">
+					<div class="card-header bg-dark text-light" id="header">
 						<h3 class="text-center">STUDENT FEES DETAILS</h3>
 						<span class="float:right"><a class="btn btn-info btn-block btn-m col-sm-2 float-right"  style="margin-right:20px;" href="javascript:void(0)" id="new_fees">
 					<i class="fa fa-plus"></i> Add 
@@ -34,12 +34,12 @@
 					</div>
 					<div class="card-body">
 						<table class="table table-condensed  table-striped table-hover">
-							<thead  class="thead-info">
+							<thead  class="thead-dark">
 								<tr>
 									<th class="text-center">#</th>
 									<th class="h5">Student Number</th>
 									<th class="h5">Reciept No.</th>
-									<th class="h5">Name</th>
+									<th class="h5"> Full Name</th>
 									<th class="h5">Total Fee</th>
 									<th class="h5" type="currency">Paid</th>
 									<th class="h5">Balance</th>
@@ -76,14 +76,19 @@
 										<p> <b><?php echo number_format($balance,2) ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-m btn-outline-info view_payment" type="button" data-id="<?php echo $row['id'] ?>">View</button>
-										<button class="btn btn-m btn-outline-info edit_fees" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-m btn-outline-info delete_fees" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-m btn-outline-dark view_payment" type="button" data-id="<?php echo $row['id'] ?>">View</button>
+										<button class="btn btn-m btn-outline-dark edit_fees" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-m btn-outline-dark delete_fees" type="button" data-id="<?php echo $row['id'] ?>" >Delete</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
 							</tbody>
+							
 						</table>
+						<a href="https://www.example.com" class="info" style="text-decoration: solid;" >
+
+						<p class="h6">&copy; 2025  Fibonnacci & Fermet IT Consultancy. All rights reserved.</p>
+								</a>
 					</div>
 				</div>
 			</div>
@@ -147,25 +152,14 @@
 
 <style>
 
-#header{
-	background-color: #d9edf7;
- }
-
  
  .table-striped tbody tr:nth-of-type(odd) {
             background-color: white; 
         }
         .table-striped tbody tr:nth-of-type(even) {
-            background-color: #d9edf7; /* Light blue */
+            background-color: #E5E4E2; /* Light blue */
         }
 
-
-
-th{
-	background-color: #d9edf7;
-	color:#17a2b8;
-	
-}
 
 td{
 
@@ -208,7 +202,7 @@ label{
 			width: 50% /* Full width */
             padding: 15px; /* Increase padding for height */
             font-size: 1.25rem; /* Larger font size */
-            border: 1px solid  #17a2b8 /* Blue border */;
+            border: 1px solid  black /* Blue border */;
             border-radius: 5px; /* Rounded corners */
 		}
       

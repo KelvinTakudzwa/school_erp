@@ -27,8 +27,8 @@ if(isset($_GET['id'])){
 				<?php endwhile; ?>
 			</select>
 		</div>
-		<div class="form-group">
-			<label for="" class="control-label">Fees Type:</label>
+		<div class="form-group h6">
+			<label for="" class="control-label ">Fees Type:</label>
 			<select name="course_id" id="course_id" class="custom-select input-sm select2">
 				<option value=""></option>
 				<?php
@@ -73,10 +73,18 @@ if(isset($_GET['id'])){
 							location.reload()
 						},1000)
 				}else if(resp == 2){
-					$('#msg').html('<div class="alert alert-danger">EF Nunmber already exist.</div>')
+					$('#msg').html('<div class="alert alert-danger h6">EF Number already exist.</div>')
 					end_load()
 				}
 			}
 		})
 	})
 </script>
+
+
+<style>
+
+	.button {
+		background-color: black;
+	}
+</style>

@@ -20,7 +20,7 @@
 </head>
 <style>
 	body{
-        background:#d9edf7;
+   background:white;
   }
   .modal-dialog.large {
     width: 80% !important;
@@ -67,7 +67,7 @@
     <div class="toast-body text-white">
     </div>
   </div>
-  
+
 
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
   	<?php include $page.'.php' ?>
@@ -211,4 +211,5 @@ window._conf = function($msg='',$func='',$params = []){
     width: "100%"
   })
 </script>	
+
 </html>

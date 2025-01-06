@@ -135,4 +135,16 @@ while($row=$payments->fetch_array()){
 			</td>			
 		</tr>
 	</table>
-</div>
+  </div>
+
+  <div>
+	
+  <p id="footer">&copy; Fees Management System  used by Wayera is Designed and developed by Fibbonacci & Fermet IT Consultancy For all your IT related needs call +263 71 084 8354 </p> </div>
+
+
+  <style>
+  #footer{
+	fo:;
+  }
+  
+  </style>

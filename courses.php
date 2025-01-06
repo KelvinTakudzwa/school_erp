@@ -5,29 +5,14 @@
 
 
 
- .card-header{
-	background-color: #d9edf7;
- }
-
- 
  .table-striped tbody tr:nth-of-type(odd) {
             background-color: white; /* Light gray */
         }
         .table-striped tbody tr:nth-of-type(even) {
-            background-color: #d9edf7; /* Light blue */
+            background-color: #E5E4E2; /* Light blue */
         }
 
 
-
-th{
-	background-color: #d9edf7;
-	color:#17a2b8;
-	
-}
-
-td{
-
-}
 
 
 
@@ -66,7 +51,7 @@ label{
 			width: 50% /* Full width */
             padding: 15px; /* Increase padding for height */
             font-size: 1.25rem; /* Larger font size */
-            border: 3px solid  #17a2b8 /* Blue border */;
+            border: 1px solid  black /* Blue border */;
             border-radius: 5px; /* Rounded corners */
 		}
       
@@ -105,7 +90,7 @@ label{
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header bg-dark text-light">
 						<h3 class="text-center">List of Different Fees </h3>
 						<span class="float:right"><a class="btn btn-info btn-block btn-m col-sm-2 float-right" href="javascript:void(0)" id="new_course">
 					<i class="fa fa-plus"></i> New Entry
@@ -113,12 +98,12 @@ label{
 					
 					</div>
 					<div class="card-body">
-						<table class="able table-condensed  table-striped table-hover">
-							<thead>
-								<tr class="h5">
+						<table class="table table-condensed  table-striped table-hover">
+							<thead class="bg-dark">
+								<tr class="h5 text-light">
 									<th class="text-center">#</th>
-									<th class="">Course/Level</th>
 									<th class="">Description</th>
+									<th class="">Grade</th>
 									<th class="">Total Fee</th>
 									<th class="text-center">Action</th>
 								</tr>
@@ -141,13 +126,18 @@ label{
 										<p> <b><?php echo number_format($row['total_amount'],2) ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-m btn-outline-info edit_course" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-m btn-outline-info delete_course" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-m btn-outline-dark edit_course" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-m btn-outline-dark delete_course" type="button" data-id="<?php echo $row['id'] ?>" >Delete</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
 							</tbody>
+							
 						</table>
+						<a href="https://www.example.com" class="info" style="text-decoration: solid;" >
+
+						<p class="h6">&copy; 2025 Fermet IT Consultancy. All rights reserved.</p>
+								</a>
 					</div>
 				</div>
 			</div>
