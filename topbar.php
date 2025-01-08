@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="me-3">
                 <div class="form-white input-group" style="width: 250px;">
-                  <h6 class="text-light"> Fermet & Fibbonacci Fees Management System </h6>
+                  <h6 class="text-light"> Takudzwa and Associates </h6>
                  
                 </div>
             </form>

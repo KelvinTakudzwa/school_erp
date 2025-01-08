@@ -48,7 +48,7 @@ label{
 	  }  
 	   
 	    input{
-			width: 50% /* Full width */
+			width: 50%; /* Full width */
             padding: 15px; /* Increase padding for height */
             font-size: 1.25rem; /* Larger font size */
             border: 1px solid  black /* Blue border */;
@@ -136,7 +136,7 @@ label{
 						</table>
 						<a href="https://www.example.com" class="info" style="text-decoration: solid;" >
 
-						<p class="h6">&copy; 2025 Fermet IT Consultancy. All rights reserved.</p>
+						<p class="h6">&copy; 2025 Takudzwa and Associates. All rights reserved.</p>
 								</a>
 					</div>
 				</div>
@@ -156,7 +156,7 @@ label{
 	}
 	img{
 		max-width:100px;
-		max-height: :150px;
+		max-height:150px;
 	}
 </style>
 <script>
