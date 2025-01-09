@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-body">
                         <table class="table table-hover table-bordered table-striped">
-                            <thead class="bg-primary text-light">
+                            <thead style="background-color: #2c3e50; color: white;"> <!-- Changed to charcoal grey -->
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th>Date of Transaction</th>
@@ -69,7 +69,7 @@
                                 <?php endif; ?>
                             </tbody>
                         </table>
-                        <p class="text-center mt-4">© 2025 Fibbonnaci & Fermet IT Consultancy. All rights reserved.</p>
+                        <p class="text-center mt-4">© 2025 Takudzwa and Associates. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
     /* Header */
     .card-header {
         border-radius: 0.5rem;
-        background: linear-gradient(45deg, #007bff, #0056b3);
+        background-color: #2c3e50;
     }
 
     /* Container & Card */

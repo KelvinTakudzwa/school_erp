@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow-lg border-light rounded">
-                    <div class="card-header bg-gradient text-light" id="header">
+                    <div class="card-header bg-gradient text-light" id="header" style="background-color:  #2c3e50; color: white;">
                         <div class="d-flex justify-content-between align-items-center">
                             <h3 class="text-center">STUDENT FEES DETAILS</h3>
                             <a class="btn btn-success btn-sm" href="javascript:void(0)" id="new_fees">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="card-body">
                         <table class="table table-hover table-bordered table-striped">
-                            <thead class="bg-primary text-light">
+                            <thead style="background-color:  #2c3e50; color: white;">
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="h5">Student Number</th>

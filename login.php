@@ -154,7 +154,7 @@ ob_end_flush();
         },
         success: function(resp) {
           if (resp == 1) {
-            location.href = 'index.php?page=payments';
+            location.href = 'index.php?page=home';
           } else {
             $('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
             $('button').removeAttr('disabled').text('Login');

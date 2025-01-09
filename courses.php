@@ -1,197 +1,144 @@
-<?php include('db_connect.php');?>
-<style>
-
-
-
-
-
- .table-striped tbody tr:nth-of-type(odd) {
-            background-color: white; /* Light gray */
-        }
-        .table-striped tbody tr:nth-of-type(even) {
-            background-color: #E5E4E2; /* Light blue */
-        }
-
-
-
-
-
-label{
-	font-size:1rem;
-  }
-
-
-	.paginate_button{
-		
-		color:white;
-
-	}
-	
-	a{
-		font-size: 1.00rem;
-
-	}
-
-  
-        .dataTables_info{
-			font-size: 1.00rem;
-		}
-	  
-
-
-
-    select{
-		background-color: white;
-	}
-      a{
-		font-size: 1.25rem;
-	  }  
-	   
-	    input{
-			width: 50%; /* Full width */
-            padding: 15px; /* Increase padding for height */
-            font-size: 1.25rem; /* Larger font size */
-            border: 1px solid  black /* Blue border */;
-            border-radius: 5px; /* Rounded corners */
-		}
-      
-    
-
-
-
-
-
-
-
-
-	input[type=checkbox]
-{
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(1.3); /* IE */
-  -moz-transform: scale(1.3); /* FF */
-  -webkit-transform: scale(1.3); /* Safari and Chrome */
-  -o-transform: scale(1.3); /* Opera */
-  transform: scale(1.3);
-  padding: 10px;
-  cursor:pointer;
-}
-</style>
+<?php include('db_connect.php'); ?>
 <div class="container-fluid">
-	
-	<div class="col-lg-12">
-		<div class="row mb-4 mt-4">
-			<div class="col-md-12">
-				
-			</div>
-		</div>
-		<div class="row">
-			<!-- FORM Panel -->
-
-			<!-- Table Panel -->
-			<div class="col-md-12">
-				<div class="card">
-					<div class="card-header bg-dark text-light">
-						<h3 class="text-center">List of Different Fees </h3>
-						<span class="float:right"><a class="btn btn-info btn-block btn-m col-sm-2 float-right" href="javascript:void(0)" id="new_course">
-					<i class="fa fa-plus"></i> New Entry
-				</a></span>
-					
-					</div>
-					<div class="card-body">
-						<table class="table table-condensed  table-striped table-hover">
-							<thead class="bg-dark">
-								<tr class="h5 text-light">
-									<th class="text-center">#</th>
-									<th class="">Description</th>
-									<th class="">Grade</th>
-									<th class="">Total Fee</th>
-									<th class="text-center">Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php 
-								$i = 1;
-								$course = $conn->query("SELECT * FROM courses  order by course asc ");
-								while($row=$course->fetch_assoc()):
-								?>
-								<tr class="h6">
-									<td class="text-center"><?php echo $i++ ?></td>
-									<td>
-										<p> <b><?php echo $row['course'] . " - " . $row['level'] ?></b></p>
-									</td>
-									<td class="">
-										 <p><small><i><b><?php echo $row['description'] ?></i></small></p>
-									</td>
-									<td class="text-center">
-										<p> <b><?php echo number_format($row['total_amount'],2) ?></b></p>
-									</td>
-									<td class="text-center">
-										<button class="btn btn-m btn-outline-dark edit_course" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-m btn-outline-dark delete_course" type="button" data-id="<?php echo $row['id'] ?>" >Delete</button>
-									</td>
-								</tr>
-								<?php endwhile; ?>
-							</tbody>
-							
-						</table>
-						<a href="https://www.example.com" class="info" style="text-decoration: solid;" >
-
-						<p class="h6">&copy; 2025 Takudzwa and Associates. All rights reserved.</p>
-								</a>
-					</div>
-				</div>
-			</div>
-			<!-- Table Panel -->
-		</div>
-	</div>	
-
+    <div class="col-lg-12">
+        <div class="row mb-4 mt-4">
+            <div class="col-md-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow-lg border-light rounded">
+                    <div class="card-header bg-gradient text-light">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3>List of Different Fees</h3>
+                            <a class="btn btn-success btn-sm" href="javascript:void(0)" id="new_course">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover table-bordered table-striped">
+                            <thead style="background-color: #2c3e50; color: white;">
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Description</th>
+                                    <th>Grade</th>
+                                    <th>Total Fee</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                $i = 1;
+                                $course = $conn->query("SELECT * FROM courses ORDER BY course ASC");
+                                while ($row = $course->fetch_assoc()):
+                                ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $i++; ?></td>
+                                    <td><b><?php echo $row['course'] . " - " . $row['level']; ?></b></td>
+                                    <td><small><i><b><?php echo $row['description']; ?></b></i></small></td>
+                                    <td class="text-right"><b><?php echo number_format($row['total_amount'], 2); ?></b></td>
+                                    <td class="text-center">
+                                        <button class="btn btn-outline-primary btn-sm edit_course" type="button" data-id="<?php echo $row['id']; ?>">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-sm delete_course" type="button" data-id="<?php echo $row['id']; ?>">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <?php endwhile; ?>
+                                <?php if ($course->num_rows == 0): ?>
+                                <tr>
+                                    <td class="text-center" colspan="5">No data available.</td>
+                                </tr>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+                        <p class="text-center mt-4">© 2025 Takudzwa and Associates. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <style>
-	
-	td{
-		vertical-align: middle !important;
-	}
-	td p{
-		margin: unset
-	}
-	img{
-		max-width:100px;
-		max-height:150px;
-	}
+    /* General Styling */
+    .table th, .table td {
+        vertical-align: middle;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .table th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .btn {
+        font-size: 1.5rem; /* Adjusted for icon visibility */
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    /* Header */
+    .card-header {
+        border-radius: 0.5rem;
+        background-color:  #2c3e50;
+    }
+
+    /* Container & Card */
+    .card {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    /* Footer */
+    .text-center {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
 </style>
+
 <script>
-	$(document).ready(function(){
-		$('table').dataTable()
-	})
-	$('#new_course').click(function(){
-		uni_modal("New Course and Fees Entry","manage_course.php",'large')
-		
-	})
+    $(document).ready(function () {
+        $('table').DataTable();
+    });
 
-	$('.edit_course').click(function(){
-		uni_modal("Manage Course and Fees Entry","manage_course.php?id="+$(this).attr('data-id'),'large')
-		
-	})
-	$('.delete_course').click(function(){
-		_conf("Are you sure to delete this course?","delete_course",[$(this).attr('data-id')])
-	})
-	
-	function delete_course($id){
-		start_load()
-		$.ajax({
-			url:'ajax.php?action=delete_course',
-			method:'POST',
-			data:{id:$id},
-			success:function(resp){
-				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
-					setTimeout(function(){
-						location.reload()
-					},1500)
+    $('#new_course').click(function () {
+        uni_modal("New Course and Fees Entry", "manage_course.php", 'mid-large');
+    });
 
-				}
-			}
-		})
-	}
+    $('.edit_course').click(function () {
+        uni_modal("Manage Course and Fees Entry", "manage_course.php?id=" + $(this).attr('data-id'), 'mid-large');
+    });
+
+    $('.delete_course').click(function () {
+        _conf("Are you sure to delete this course?", "delete_course", [$(this).attr('data-id')]);
+    });
+
+    function delete_course($id) {
+        start_load();
+        $.ajax({
+            url: 'ajax.php?action=delete_course',
+            method: 'POST',
+            data: { id: $id },
+            success: function (resp) {
+                if (resp == 1) {
+                    alert_toast("Data successfully deleted", 'success');
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1500);
+                }
+            }
+        });
+    }
 </script>
-
